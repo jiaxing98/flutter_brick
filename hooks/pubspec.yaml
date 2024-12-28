@@ -1,0 +1,11 @@
+name: flutter_brick_hooks
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  mason: ^0.1.0
+
+  # Contains utility functions and classes in the style of dart:collection to make working with collections easier.
+  # https://pub.dev/packages/collection
+  collection: ^1.18.0

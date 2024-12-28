@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "appBarTitle": "Counter",
+  "@appBarTitle": {
+    "description": "Text shown in the AppBar of the MyHomePage"
+  },
+  "counterMessage": "You have pushed the button this many times",
+  "@counterMessage": {
+    "description": "Text showing the number of times user has clicked the button"
+  },
+  "incrementButton": "Increment",
+  "@incrementButton": {
+    "description": "Text shown on the increment button"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "@@locale": "zh",
+  "appBarTitle": "计数器",
+  "@appBarTitle": {
+    "description": "显示在MyHomePage中的AppBar文字"
+  },
+  "counterMessage": "你按下按钮的次数是",
+  "@counterMessage": {
+    "description": "显示用户点击按钮次数的文字"
+  },
+  "incrementButton": "增加",
+  "@incrementButton": {
+    "description": "在增加按钮上显示的文字"
+  }
+}

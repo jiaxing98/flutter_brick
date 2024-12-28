@@ -1,0 +1,15 @@
+{
+  "@@locale": "ja",
+  "appBarTitle": "カウンター",
+  "@appBarTitle": {
+    "description": "MyHomePageのAppBarに表示されるテキスト"
+  },
+  "counterMessage": "あなたはこのボタンをこれだけ押しました",
+  "@counterMessage": {
+    "description": "ユーザーがボタンをクリックした回数を表示するテキスト"
+  },
+  "incrementButton": "インクリメント",
+  "@incrementButton": {
+    "description": "インクリメントボタンに表示されるテキスト"
+  }
+}

@@ -1,0 +1,93 @@
+flavors:
+  dev:
+    app:
+      name: "[Dev] {{app_name}}"
+    android:
+      applicationId: "{{org_name}}.{{project_name}}.dev"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/dev/google-services.json"
+      {{/firebase}}
+      {{#agconnect}}
+      agconnect:
+        config: ".agconnect/dev/agconnect-services.json"
+      {{/agconnect}}
+    ios:
+      bundleId: "{{org_name}}.{{project_name}}.dev"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/dev/GoogleService-Info.plist"
+      {{/firebase}}
+  
+  stg:
+    app:
+      name: "[Stg] {{app_name}}"
+    android:
+      applicationId: "{{org_name}}.{{project_name}}.stg"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/stg/google-services.json"
+      {{/firebase}}
+      {{#agconnect}}
+      agconnect:
+        config: ".agconnect/stg/agconnect-services.json"
+      {{/agconnect}}
+    ios:
+      bundleId: "{{org_name}}.{{project_name}}.stg"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/stg/GoogleService-Info.plist"
+      {{/firebase}}
+
+  prod:
+    app:
+      name: "{{app_name}}"
+    android:
+      applicationId: "{{org_name}}.{{project_name}}"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/prod/google-services.json"
+      {{/firebase}}
+      {{#agconnect}}
+      agconnect:
+        config: ".agconnect/prod/agconnect-services.json"
+      {{/agconnect}}
+    ios:
+      bundleId: "{{org_name}}.{{project_name}}"
+      {{#firebase}}
+      firebase:
+        config: ".firebase/prod/GoogleService-Info.plist"
+      {{/firebase}}
+
+instructions:
+  - assets:download
+  - assets:extract
+  - android:androidManifest
+  - android:buildGradle
+  - android:dummyAssets
+  - android:icons
+#  - flutter:flavors
+#  - flutter:app
+#  - flutter:pages
+#  - flutter:main
+#  - flutter:targets
+  - ios:podfile
+  - ios:xcconfig
+  - ios:buildTargets
+  - ios:schema
+  - ios:dummyAssets
+  - ios:icons
+  - ios:plist
+  - ios:launchScreen
+  - macos:podfile
+  - macos:xcconfig
+  - macos:configs
+  - macos:buildTargets
+  - macos:schema
+  - macos:dummyAssets
+  - macos:icons
+  - macos:plist
+  - google:firebase
+  - huawei:agconnect
+  - assets:clean
+  - ide:config
