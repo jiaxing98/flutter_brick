@@ -15,8 +15,6 @@ Future<void> run(HookContext context) async {
     // ! Run `flutter pub run flutter_flavorizr`
     context.logger.info('Generating flavors...');
 
-    // final flavorizrResult = await Process.run(
-    //     'flutter', ['pub', 'run', 'flutter_flavorizr', '-p', defaultProcessors.join(",")]);
     final flavorizrResult = await Process.run('flutter', ['pub', 'run', 'flutter_flavorizr']);
     stdout.write(flavorizrResult.stdout);
     stderr.write(flavorizrResult.stderr);
@@ -39,32 +37,3 @@ Future<void> run(HookContext context) async {
     context.logger.err('Error during post-generation: $e');
   }
 }
-
-final defaultProcessors = [
-  'assets:download',
-  'assets:extract',
-  'android:androidManifest',
-  'android:buildGradle',
-  'android:dummyAssets',
-  'android:icons',
-  'ios:podfile',
-  'ios:xcconfig',
-  'ios:buildTargets',
-  'ios:schema',
-  'ios:dummyAssets',
-  'ios:icons',
-  'ios:plist',
-  'ios:launchScreen',
-  'macos:podfile',
-  'macos:xcconfig',
-  'macos:configs',
-  'macos:buildTargets',
-  'macos:schema',
-  'macos:dummyAssets',
-  'macos:icons',
-  'macos:plist',
-  'google:firebase',
-  'huawei:agconnect',
-  'assets:clean',
-  'ide:config',
-];
