@@ -76,6 +76,10 @@ dependencies:
   # https://pub.dev/packages/dio
   dio: ^5.7.0
 
+  # retrofit.dart is a type conversion dio client generator using source_gen and inspired by Chopper and Retrofit.
+  # https://pub.dev/packages/retrofit
+  retrofit: ^4.4.1
+
   # Defines the annotations used by json_serializable to create code for JSON serialization and deserialization.
   # https://pub.dev/packages/json_annotation
   json_annotation: ^4.9.0
@@ -159,6 +163,14 @@ dev_dependencies:
   # without the need for manual mocks or code generation.
   # https://pub.dev/packages/mocktail
   mocktail: ^1.0.4
+
+  # retrofit.dart is a type conversion dio client generator using source_gen and inspired by Chopper and Retrofit.
+  # https://pub.dev/packages/retrofit_generator
+  retrofit_generator: '>=8.0.0 <10.0.0'
+
+  # http_mock_adapter is a simple to use mocking package for Dio intended to be used in tests.
+  # https://pub.dev/packages/http_mock_adapter
+  http_mock_adapter: ^0.6.1
 
   # Provides Dart Build System builders for handling JSON.
   # https://pub.dev/packages/json_serializable
