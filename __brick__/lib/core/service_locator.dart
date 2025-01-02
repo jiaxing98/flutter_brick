@@ -27,9 +27,7 @@ Future<void> initializedApp() async {
       ],
     ),
   );
-}
 
-void injectDependencies() {
   _injectRepositories();
   _injectBlocs();
 }

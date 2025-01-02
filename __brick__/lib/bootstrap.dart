@@ -31,7 +31,6 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   // Add cross-flavor configuration here
   WidgetsFlutterBinding.ensureInitialized();
   await initializedApp();
-  injectDependencies();
 
   runApp(await builder());
 }
