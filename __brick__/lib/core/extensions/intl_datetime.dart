@@ -1,6 +1,13 @@
 import 'package:intl/intl.dart';
 
+// for more info: https://api.flutter.dev/flutter/intl/DateFormat-class.html
 extension IntlDateTimeX on DateTime {
+  // 5:08 PM
+  String get jm => DateFormat.jm().format(this);
+
+  // 17:08
+  String get Hm => DateFormat.Hm().format(this);
+
   // 10/23/2024
   String get yMd => DateFormat.yMd().format(this);
 
