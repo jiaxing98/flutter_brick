@@ -54,11 +54,15 @@ dependencies:
 
   # A dart package that helps implement the BLoC pattern.
   # https://pub.dev/packages/bloc
-  bloc: ^8.1.4
+  bloc: ^9.0.0
 
   # Widgets that make it easy to integrate blocs and cubits into Flutter.
   # https://pub.dev/packages/flutter_bloc
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.0.0
+
+  # An extension to package:bloc which automatically persists and restores bloc and cubit states.
+  # https://pub.dev/packages/hydrated_bloc
+  hydrated_bloc: ^10.0.0
 
   # Being able to compare objects in Dart often involves having to override the == operator as well as hashCode.
   # https://pub.dev/packages/equatable
@@ -96,6 +100,10 @@ dependencies:
   # https://pub.dev/packages/shared_preferences
   shared_preferences: ^2.2.3
 
+  # Drift is a reactive persistence library for Flutter and Dart, built on top of SQLite.
+  # https://pub.dev/packages/drift
+  drift: ^2.24.0
+
   # This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
   # https://pub.dev/packages/permission_handler
   permission_handler: ^11.3.1
@@ -103,6 +111,10 @@ dependencies:
   # A Flutter plugin for finding commonly used locations on the filesystem.
   # https://pub.dev/packages/path_provider
   path_provider: ^2.1.4
+
+  # A comprehensive, cross-platform path manipulation library for Dart.
+  # https://pub.dev/packages/path
+  path: ^1.9.0
 
   # This package allows for customizing the native splash screen background color and splash image.
   # https://pub.dev/packages/flutter_native_splash
@@ -132,6 +144,10 @@ dependencies:
   # https://pub.dev/packages/auto_size_text
   auto_size_text: ^3.0.0
 
+  # The free Font Awesome Icon pack available as set of Flutter Icons
+  # https://pub.dev/packages/font_awesome_flutter
+  font_awesome_flutter: ^10.8.0
+
   # Simple, fast generation of RFC4122 and RFC9562 UUIDs.
   # https://pub.dev/packages/uuid
   uuid: ^4.5.1
@@ -157,7 +173,7 @@ dev_dependencies:
 
   # A Dart package that makes testing blocs and cubits easy. Built to work with bloc and mocktail.
   # https://pub.dev/packages/bloc_test
-  bloc_test: ^9.1.7
+  bloc_test: ^10.0.0
 
   # Mocktail focuses on providing a familiar, simple API for creating mocks in Dart (with null-safety)
   # without the need for manual mocks or code generation.
@@ -175,6 +191,10 @@ dev_dependencies:
   # Provides Dart Build System builders for handling JSON.
   # https://pub.dev/packages/json_serializable
   json_serializable: ^6.8.0
+
+  # Turns your Table classes from drift into database code.
+  # https://pub.dev/packages/drift_dev
+  drift_dev: ^2.24.0
 
   # The build_runner package provides a concrete way of generating files using Dart code.
   # https://pub.dev/packages/build_runner
