@@ -3,9 +3,9 @@ import 'package:get_it/get_it.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:{{project_name}}/core/env.dart';
 import 'package:{{project_name}}/core/l10n/l10n.dart';
 import 'package:{{project_name}}/core/theme/theme.dart';
+import 'package:{{project_name}}/env.dart';
 
 GetIt sl = GetIt.instance;
 

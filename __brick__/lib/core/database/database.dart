@@ -9,6 +9,7 @@ import 'package:path_provider/path_provider.dart';
 
 part 'database.g.dart';
 
+// ! dart run build_runner build
 @DriftDatabase(
   include: {'tables.drift'},
 )
