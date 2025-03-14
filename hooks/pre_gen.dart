@@ -16,7 +16,7 @@ void run(HookContext context) async {
   }
 
   // ! Read organization name from android/app/build.gradle
-  final buildGradle = File('android/app/build.gradle');
+  final buildGradle = File('android/app/build.gradle.kts');
   if (buildGradle.existsSync()) {
     final lines = buildGradle.readAsLinesSync();
     final applicationIdLine = lines.firstWhere((line) => line.contains('applicationId'));
