@@ -1,4 +1,4 @@
-import 'package:{{project_name}}/core/helpers/encryption/aes_encryption.dart';
+import 'package:{{project_name}}/core/utils/encryption/aes_encryption.dart';
 import 'package:encrypt/encrypt.dart';
 
 class AesEncryptionImpl extends AesEncryption {

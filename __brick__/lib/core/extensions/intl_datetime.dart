@@ -28,4 +28,7 @@ extension IntlDateTimeX on DateTime {
 
   // 23/10/2024, 2.30 AM
   String get yMdhmma => DateFormat("dd/MM/yyyy, h:mm a").format(this);
+
+  // 2024-10-23
+  String get yyyyMMdd => DateFormat("yyyy-MM-dd").format(this);
 }

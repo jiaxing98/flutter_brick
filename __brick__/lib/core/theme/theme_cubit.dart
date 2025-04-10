@@ -34,9 +34,15 @@ class ThemeCubit extends Cubit<ThemeState> {
     emit(state.copyWith(mode: savedMode, theme: savedTheme));
   }
 
-  Future<void> changeMode(ThemeMode mode) async {
-    await _sp.setInt(_themeMode, mode.index);
-    emit(state.copyWith(mode: mode));
+  Future<void> changeMode() async {
+    final selectedMode = switch (state.mode) {
+      ThemeMode.light => ThemeMode.dark,
+      ThemeMode.dark => ThemeMode.light,
+      ThemeMode.system => ThemeMode.light
+    };
+
+    await _sp.setInt(_themeMode, selectedMode.index);
+    emit(state.copyWith(mode: selectedMode));
   }
 
   Future<void> changeTheme() async {

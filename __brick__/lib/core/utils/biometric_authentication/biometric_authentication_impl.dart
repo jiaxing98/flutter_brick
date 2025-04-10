@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:{{project_name}}/core/extensions/string_extension.dart';
-import 'package:{{project_name}}/core/helpers/biometric_authentication/biometric_authentication.dart';
-import 'package:{{project_name}}/core/helpers/biometric_authentication/exception.dart';
-import 'package:{{project_name}}/core/helpers/encryption/aes_encryption.dart';
-import 'package:{{project_name}}/core/helpers/encryption/aes_encryption_impl.dart';
+import 'package:{{project_name}}/core/utils/biometric_authentication/biometric_authentication.dart';
+import 'package:{{project_name}}/core/utils/biometric_authentication/exception.dart';
+import 'package:{{project_name}}/core/utils/encryption/aes_encryption.dart';
+import 'package:{{project_name}}/core/utils/encryption/aes_encryption_impl.dart';
 
 class BiometricAuthenticationImpl extends BiometricAuthentication {
   final _biometricLoginEnabled = "key_biometric_login_enabled";

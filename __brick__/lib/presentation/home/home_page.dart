@@ -36,14 +36,7 @@ class _HomePageState extends State<HomePage> {
           BlocBuilder<ThemeCubit, ThemeState>(
             builder: (context, state) {
               return IconButton(
-                onPressed: () => context.read<ThemeCubit>().changeMode(
-                      switch (state.mode) {
-                        ThemeMode.light => ThemeMode.dark,
-                        ThemeMode.dark => ThemeMode.light,
-                        ThemeMode.system =>
-                          context.brightness == Brightness.light ? ThemeMode.dark : ThemeMode.light,
-                      },
-                    ),
+                onPressed: () => context.read<ThemeCubit>().changeMode(),
                 icon: Icon(state.mode == ThemeMode.light ? Icons.light_mode : Icons.dark_mode),
               );
             },

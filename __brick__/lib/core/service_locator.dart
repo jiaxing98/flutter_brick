@@ -10,19 +10,23 @@ import 'package:{{project_name}}/env.dart';
 GetIt sl = GetIt.instance;
 
 Future<void> initializedApp() async {
+  // * HydratedBloc
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: HydratedStorageDirectory((await getTemporaryDirectory()).path),
   );
 
-  final sharedPreferences = await SharedPreferences.getInstance();
-  sl.registerSingleton<SharedPreferences>(sharedPreferences);
+  // * SharedPreference
+  final sp = await SharedPreferences.getInstance();
+  sl.registerSingleton<SharedPreferences>(sp);
 
+  // * Theme
   final defaultTheme =
       appThemes[Env.defaultThemeData] ?? (light: RoseWoodX.light(), dark: RoseWoodX.dark());
   final theme = sl
-      .registerSingleton<ThemeCubit>(ThemeCubit(sp: sharedPreferences, defaultTheme: defaultTheme));
+      .registerSingleton<ThemeCubit>(ThemeCubit(sp: sp, defaultTheme: defaultTheme));
   theme.loadTheme();
 
+  // * L10n
   sl.registerSingleton<L10nCubit>(
     L10nCubit(
       defaultLocale: Locale('en'),
@@ -34,8 +38,30 @@ Future<void> initializedApp() async {
     ),
   );
 
+  // * TokenStorage
+  final tokenStorage = sl.registerSingleton<TokenStorage>(TokenStorage(sp: sp));
+
+  // * Dio
+  final dio = sl.registerSingleton<Dio>(Dio(BaseOptions(baseUrl: Env.baseUrl)));
+  // ! This should be the last interceptor added,
+  // ! otherwise modifications by following interceptors will not be logged.
+  // * Dio
+  dio.interceptors.add(
+    LogInterceptor(
+      requestBody: true,
+      responseHeader: false,
+      responseBody: true,
+    ),
+  );
+
+  // * Dependencies
+  _injectDataSources();
   _injectRepositories();
   _injectBlocs();
+}
+
+void _injectDataSources() {
+  final dio = sl.get<Dio>();
 }
 
 void _injectRepositories() {}
