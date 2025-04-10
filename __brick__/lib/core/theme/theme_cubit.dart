@@ -18,31 +18,31 @@ class ThemeCubit extends Cubit<ThemeState> {
     required SharedPreferences sp,
     required ({ThemeData light, ThemeData dark}) defaultTheme,
   })  : _sp = sp,
-        super(ThemeState(
+        super(
+        ThemeState(
           mode: ThemeMode.system,
           theme: defaultTheme,
-        ));
+        ),
+      );
 
-  void loadTheme() {
+  void loadTheme(Brightness brightness) {
     final index = _sp.getInt(_themeMode);
     final key = _sp.getString(_themeData);
 
-    ThemeMode? savedMode = index != null ? ThemeMode.values[index] : state.mode;
+    ThemeMode savedMode = index != null ? ThemeMode.values[index] : state.mode;
+    if (savedMode == ThemeMode.system) {
+      savedMode = brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark;
+    }
+
     ({ThemeData light, ThemeData dark})? savedTheme =
         (key != null && appThemes.containsKey(key)) ? appThemes[key]! : state.theme;
 
     emit(state.copyWith(mode: savedMode, theme: savedTheme));
   }
 
-  Future<void> changeMode() async {
-    final selectedMode = switch (state.mode) {
-      ThemeMode.light => ThemeMode.dark,
-      ThemeMode.dark => ThemeMode.light,
-      ThemeMode.system => ThemeMode.light
-    };
-
-    await _sp.setInt(_themeMode, selectedMode.index);
-    emit(state.copyWith(mode: selectedMode));
+  Future<void> changeMode(ThemeMode mode) async {
+    await _sp.setInt(_themeMode, mode.index);
+    emit(state.copyWith(mode: mode));
   }
 
   Future<void> changeTheme() async {

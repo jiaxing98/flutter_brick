@@ -63,6 +63,7 @@ instructions:
   - assets:download
   - assets:extract
   - android:androidManifest
+  - android:flavorizrGradle
   - android:buildGradle
   - android:dummyAssets
   - android:icons
@@ -70,7 +71,6 @@ instructions:
 #  - flutter:app
 #  - flutter:pages
 #  - flutter:main
-#  - flutter:targets
   - ios:podfile
   - ios:xcconfig
   - ios:buildTargets
