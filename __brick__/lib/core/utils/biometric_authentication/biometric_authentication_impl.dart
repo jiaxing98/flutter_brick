@@ -89,14 +89,14 @@ class BiometricAuthenticationImpl extends BiometricAuthentication {
   }
 
   @override
-  Future<void> enabledBiometricLogin(String password) async {
+  Future<void> enableBiometricLogin(String password) async {
     final encrypted = _aes.encrypt(password);
     await _sp.setString(_biometricLoginPassword, encrypted);
     await _sp.setBool(_biometricLoginEnabled, true);
   }
 
   @override
-  Future<void> disabledBiometricLogin() async {
+  Future<void> disableBiometricLogin() async {
     await _sp.setBool(_biometricLoginEnabled, false);
     await _sp.remove(_biometricLoginPassword);
   }

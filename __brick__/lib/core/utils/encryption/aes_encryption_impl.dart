@@ -14,7 +14,7 @@ class AesEncryptionImpl extends AesEncryption {
 
   @override
   String decrypt(String encryptedText) {
-    final encrypted = Encrypted.fromBase16(encryptedText);
+    final encrypted = Encrypted.fromBase64(encryptedText);
     return _encrypter.decrypt(encrypted, iv: _iv);
   }
 
