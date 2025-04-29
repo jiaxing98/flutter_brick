@@ -34,152 +34,161 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  # Android App Links, Deep Links, iOS Universal Links and Custom URL schemes handler (desktop included linux, macOS, Windows).
+  # https://pub.dev/packages/app_links
+  app_links: ^6.3.2
+
+  # Flutter widget that automatically resizes text to fit perfectly within its bounds.
+  # https://pub.dev/packages/auto_size_text
+  auto_size_text: ^3.0.0
+
+  # A dart package that helps implement the BLoC pattern.
+  # https://pub.dev/packages/bloc
+  bloc: ^9.0.0
+
+  # Contains utility functions and classes in the style of dart:collection to make working with collections easier.
+  # https://pub.dev/packages/collection
+  collection: ^1.18.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+  # A powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
+  # https://pub.dev/packages/dio
+  dio: ^5.7.0
+
+  # A set of high-level APIs over PointyCastle for two-way cryptography.
+  # https://pub.dev/packages/encrypt
+  encrypt: ^5.0.3
+
+  # Being able to compare objects in Dart often involves having to override the == operator as well as hashCode.
+  # https://pub.dev/packages/equatable
+  equatable: ^2.0.5
+
+  # A package that allows you to use the native file explorer to pick single or multiple files, with extensions filtering support.
+  # https://pub.dev/packages/file_picker
+  file_picker: ^10.1.2
+
+  # Use FlexColorScheme to make beautiful Flutter Material Design themes.
+  # https://pub.dev/packages/flex_color_scheme
+  flex_color_scheme: ^8.0.2
+
+  # A performant library that makes it simple to add almost any kind of animated effect in Flutter.
+  # https://pub.dev/packages/flutter_animate
+  flutter_animate: ^4.5.2
+
+  # Widgets that make it easy to integrate blocs and cubits into Flutter.
+  # https://pub.dev/packages/flutter_bloc
+  flutter_bloc: ^9.0.0
+
+  # This package allows for customizing the native splash screen background color and splash image.
+  # https://pub.dev/packages/flutter_native_splash
+  flutter_native_splash: ^2.3.9
+
+  # A collection of loading indicators animated with flutter.
+  # https://pub.dev/packages/flutter_spinkit
+  flutter_spinkit: ^5.2.1
+
+  # A unified form representation in Dart. Formz aims to simplify form representation and validation in a generic way.
+  # https://pub.dev/packages/formz
+  formz: ^0.7.0
+
+  # This is a simple Service Locator for Dart and Flutter projects.
+  # https://pub.dev/packages/get_it
+  get_it: ^8.0.1
+
+  # A Flutter package to use fonts from fonts.google.com.
+  # https://pub.dev/packages/google_fonts
+  google_fonts: ^6.2.1
+
+  # A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens.
+  # https://pub.dev/packages/go_router
+  go_router: ^14.3.0
+
+  # An extension to package:bloc which automatically persists and restores bloc and cubit states.
+  # https://pub.dev/packages/hydrated_bloc
+  hydrated_bloc: ^10.0.0
+
+  # A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the camera.
+  # https://pub.dev/packages/image_picker
+  image_picker: ^1.1.2
+
   # Provides internationalization and localization facilities, including message translation,
   # plurals and genders, date/number formatting and parsing, and bidirectional text.
   # https://pub.dev/packages/intl
   # flutter gen-l10n
   intl: ^0.19.0
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-
-  # Contains utility functions and classes in the style of dart:collection to make working with collections easier.
-  # https://pub.dev/packages/collection
-  collection: ^1.18.0
-
-  # This is a simple Service Locator for Dart and Flutter projects.
-  # https://pub.dev/packages/get_it
-  get_it: ^8.0.1
-
-  # A dart package that helps implement the BLoC pattern.
-  # https://pub.dev/packages/bloc
-  bloc: ^9.0.0
-
-  # Widgets that make it easy to integrate blocs and cubits into Flutter.
-  # https://pub.dev/packages/flutter_bloc
-  flutter_bloc: ^9.0.0
-
-  # An extension to package:bloc which automatically persists and restores bloc and cubit states.
-  # https://pub.dev/packages/hydrated_bloc
-  hydrated_bloc: ^10.0.0
-
-  # Being able to compare objects in Dart often involves having to override the == operator as well as hashCode.
-  # https://pub.dev/packages/equatable
-  equatable: ^2.0.5
-
-  # RxDart extends the capabilities of Dart Streams and StreamControllers.
-  # https://pub.dev/packages/rxdart
-  rxdart: ^0.28.0
-
-  # A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens.
-  # https://pub.dev/packages/go_router
-  go_router: ^14.3.0
-
-  # A powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
-  # https://pub.dev/packages/dio
-  dio: ^5.7.0
-
-  # retrofit.dart is a type conversion dio client generator using source_gen and inspired by Chopper and Retrofit.
-  # https://pub.dev/packages/retrofit
-  retrofit: ^4.4.1
-
   # Defines the annotations used by json_serializable to create code for JSON serialization and deserialization.
   # https://pub.dev/packages/json_annotation
   json_annotation: ^4.9.0
-
-  # Android App Links, Deep Links, iOS Universal Links and Custom URL schemes handler (desktop included linux, macOS, Windows).
-  # https://pub.dev/packages/app_links
-  app_links: ^6.3.2
-
-  # Flutter plugin for launching a URL on Android and iOS. Supports web, phone, SMS, and email schemes.
-  # https://pub.dev/packages/url_launcher
-  url_launcher: ^6.3.1
-
-  # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
-  # https://pub.dev/packages/shared_preferences
-  shared_preferences: ^2.2.3
-
-  # Drift is a reactive persistence library for Flutter and Dart, built on top of SQLite.
-  # https://pub.dev/packages/drift
-  drift: ^2.24.0
-  drift_flutter: ^0.2.4
-
-  # This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
-  # https://pub.dev/packages/permission_handler
-  permission_handler: ^11.3.1
-
-  # A Flutter plugin for finding commonly used locations on the filesystem.
-  # https://pub.dev/packages/path_provider
-  path_provider: ^2.1.4
-
-  # A comprehensive, cross-platform path manipulation library for Dart.
-  # https://pub.dev/packages/path
-  path: ^1.9.0
-
-  # A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the camera.
-  # https://pub.dev/packages/image_picker
-  image_picker: ^1.1.2
 
   # This Flutter plugin provides means to perform local, on-device authentication of the user.
   # https://pub.dev/packages/local_auth
   local_auth: ^2.3.0
 
-  # A set of high-level APIs over PointyCastle for two-way cryptography.
-  # https://pub.dev/packages/encrypt
-  encrypt: ^5.0.3
-
-  # This package allows for customizing the native splash screen background color and splash image.
-  # https://pub.dev/packages/flutter_native_splash
-  flutter_native_splash: ^2.3.9
-
-  # Use FlexColorScheme to make beautiful Flutter Material Design themes.
-  # https://pub.dev/packages/flex_color_scheme
-  flex_color_scheme: ^8.0.2
-
   # Overlay Loading Indicator
   # https://pub.dev/packages/loader_overlay
   loader_overlay: ^4.0.3
 
-  # A collection of loading indicators animated with flutter.
-  # https://pub.dev/packages/flutter_spinkit
-  flutter_spinkit: ^5.2.1
+  # A comprehensive, cross-platform path manipulation library for Dart.
+  # https://pub.dev/packages/path
+  path: ^1.9.0
+
+  # A Flutter plugin for finding commonly used locations on the filesystem.
+  # https://pub.dev/packages/path_provider
+  path_provider: ^2.1.4
+
+  # Flutter Render & show PDF documents on Web, MacOs 10.11+, Android 5.0+, iOS and Windows.
+  # https://pub.dev/packages/pdfx
+  pdfx: 2.8.0
+
+  # This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
+  # https://pub.dev/packages/permission_handler
+  permission_handler: ^11.3.1
+
+  # retrofit.dart is a type conversion dio client generator using source_gen and inspired by Chopper and Retrofit.
+  # https://pub.dev/packages/retrofit
+  retrofit: ^4.4.1
+
+  # RxDart extends the capabilities of Dart Streams and StreamControllers.
+  # https://pub.dev/packages/rxdart
+  rxdart: ^0.28.0
+
+  # Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
+  # https://pub.dev/packages/shared_preferences
+  shared_preferences: ^2.2.3
 
   # Displaying a simplified, static version of the user interface while the actual content is being fetched.
   # https://pub.dev/packages/skeletonizer
   skeletonizer: ^1.4.2
 
-  # A Flutter package to use fonts from fonts.google.com.
-  # https://pub.dev/packages/google_fonts
-  google_fonts: ^6.2.1
-
-  # Flutter widget that automatically resizes text to fit perfectly within its bounds.
-  # https://pub.dev/packages/auto_size_text
-  auto_size_text: ^3.0.0
-
-  # The free Font Awesome Icon pack available as set of Flutter Icons
-  # https://pub.dev/packages/font_awesome_flutter
-  font_awesome_flutter: ^10.8.0
-
-  # A performant library that makes it simple to add almost any kind of animated effect in Flutter.
-  # https://pub.dev/packages/flutter_animate
-  flutter_animate: ^4.5.2
-
   # Simple, fast generation of RFC4122 and RFC9562 UUIDs.
   # https://pub.dev/packages/uuid
   uuid: ^4.5.1
 
-  # A unified form representation in Dart. Formz aims to simplify form representation and validation in a generic way.
-  # https://pub.dev/packages/formz
-  formz: ^0.7.0
+  # Flutter plugin for launching a URL on Android and iOS. Supports web, phone, SMS, and email schemes.
+  # https://pub.dev/packages/url_launcher
+  url_launcher: ^6.3.1
 
-  # A Flutter plugin to use Google's ML Kit Text Recognition to recognize text in any Chinese, Devanagari, Japanese, Korean and Latin character set.
-  # https://pub.dev/packages/google_mlkit_text_recognition
-  google_mlkit_text_recognition: ^0.15.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # A Dart package that makes testing blocs and cubits easy. Built to work with bloc and mocktail.
+  # https://pub.dev/packages/bloc_test
+  bloc_test: ^10.0.0
+
+  # The build_runner package provides a concrete way of generating files using Dart code.
+  # https://pub.dev/packages/build_runner
+  build_runner: ^2.4.7
+
+  # A flutter utility to easily create flavors in your flutter application
+  # https://pub.dev/packages/flutter_flavorizr
+  # flutter pub run flutter_flavorizr
+  flutter_flavorizr: ^2.2.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -188,13 +197,13 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
-  # A flutter utility to easily create flavors in your flutter application
-  # https://pub.dev/packages/flutter_flavorizr
-  flutter_flavorizr: ^2.2.3
+  # http_mock_adapter is a simple to use mocking package for Dio intended to be used in tests.
+  # https://pub.dev/packages/http_mock_adapter
+  http_mock_adapter: ^0.6.1
 
-  # A Dart package that makes testing blocs and cubits easy. Built to work with bloc and mocktail.
-  # https://pub.dev/packages/bloc_test
-  bloc_test: ^10.0.0
+  # Provides Dart Build System builders for handling JSON.
+  # https://pub.dev/packages/json_serializable
+  json_serializable: ^6.8.0
 
   # Mocktail focuses on providing a familiar, simple API for creating mocks in Dart (with null-safety)
   # without the need for manual mocks or code generation.
@@ -205,21 +214,6 @@ dev_dependencies:
   # https://pub.dev/packages/retrofit_generator
   retrofit_generator: '>=8.0.0 <10.0.0'
 
-  # http_mock_adapter is a simple to use mocking package for Dio intended to be used in tests.
-  # https://pub.dev/packages/http_mock_adapter
-  http_mock_adapter: ^0.6.1
-
-  # Provides Dart Build System builders for handling JSON.
-  # https://pub.dev/packages/json_serializable
-  json_serializable: ^6.8.0
-
-  # Turns your Table classes from drift into database code.
-  # https://pub.dev/packages/drift_dev
-  drift_dev: ^2.24.0
-
-  # The build_runner package provides a concrete way of generating files using Dart code.
-  # https://pub.dev/packages/build_runner
-  build_runner: ^2.4.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
