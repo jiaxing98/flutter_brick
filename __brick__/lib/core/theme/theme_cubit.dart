@@ -25,15 +25,11 @@ class ThemeCubit extends Cubit<ThemeState> {
         ),
       );
 
-  void loadTheme(Brightness brightness) {
+  void loadTheme() {
     final index = _sp.getInt(_themeMode);
     final key = _sp.getString(_themeData);
 
-    ThemeMode savedMode = index != null ? ThemeMode.values[index] : state.mode;
-    if (savedMode == ThemeMode.system) {
-      savedMode = brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark;
-    }
-
+    ThemeMode? savedMode = index != null ? ThemeMode.values[index] : state.mode;
     ({ThemeData light, ThemeData dark})? savedTheme =
         (key != null && appThemes.containsKey(key)) ? appThemes[key]! : state.theme;
 

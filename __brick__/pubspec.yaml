@@ -117,6 +117,10 @@ dependencies:
   # https://pub.dev/packages/path
   path: ^1.9.0
 
+  # A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the camera.
+  # https://pub.dev/packages/image_picker
+  image_picker: ^1.1.2
+
   # This Flutter plugin provides means to perform local, on-device authentication of the user.
   # https://pub.dev/packages/local_auth
   local_auth: ^2.3.0
@@ -168,6 +172,10 @@ dependencies:
   # A unified form representation in Dart. Formz aims to simplify form representation and validation in a generic way.
   # https://pub.dev/packages/formz
   formz: ^0.7.0
+
+  # A Flutter plugin to use Google's ML Kit Text Recognition to recognize text in any Chinese, Devanagari, Japanese, Korean and Latin character set.
+  # https://pub.dev/packages/google_mlkit_text_recognition
+  google_mlkit_text_recognition: ^0.15.0
 
 dev_dependencies:
   flutter_test:

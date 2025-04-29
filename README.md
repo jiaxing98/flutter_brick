@@ -20,7 +20,7 @@ mason init
 
 ### Add brick
 ```
-mason add flutter_brick --git-url https://github.com/jiaxing98/flutter_brick.git --git-ref latest
+mason add flutter_brick --git-url https://github.com/jiaxing98/flutter_brick.git --git-ref 1.0.0
 ```
 
 ### Install brick
